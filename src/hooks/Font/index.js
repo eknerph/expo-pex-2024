@@ -5,7 +5,10 @@ const FontContext = createContext({})
 
 export function FontProvider({ children }) {
 
-  const [] = useFonts({});
+  const [loaded, error] = useFonts({
+    regular: require("../../assets/fonts/Montserrat-Regular.ttf"),
+    bold: require("../../assets/fonts/Montserrat-Bold.ttf"),
+  });
   return <FontContext.Provider value={{}}>{children}</FontContext.Provider>
 }
 
