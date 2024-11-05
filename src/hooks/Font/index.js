@@ -1,9 +1,12 @@
+import { useFonts } from "expo-font";
 import { createContext } from "react";
 
 const FontContext = createContext({})
 
 export function FontProvider({ children }) {
-return <FontContext.Provider value={{}}>{children}</FontContext.Provider>
+
+  const [] = useFonts({});
+  return <FontContext.Provider value={{}}>{children}</FontContext.Provider>
 }
 
 export function useFont() {
